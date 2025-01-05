@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Astronomy Picture of the Day (APOD)</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .abox p {
+            padding: 15px 25px;
+            background: linear-gradient(135deg, rgba(42, 157, 143, 0.1), rgba(38, 70, 83, 0.2));
+            border-radius: 10px;
+            border: 1px solid rgba(193, 247, 241, 0.3);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            margin: 10px 0;
+            font-size: 1.1em;
+            line-height: 1.6;
+            color: #e0e0e0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Astronomy Picture of the Day (APOD)</h1>
+            <div class="abox">
+                <p>Discover the universe one image at a time!</p>
+            </div>
+        </header>
+
+        <div class="date-selector">
+            <label for="date">Select a date:</label>
+            <input type="date" id="date" name="date">
+            <button onclick="fetchAPOD()">Generate</button>
+        </div>
+
+        <div id="apodContainer" class="apod-container">
+            <img id="apodImage" src="" alt="Astronomy of the Day" class="apod-image">
+            <div id="apodExplanation" class="apod-explanation"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
